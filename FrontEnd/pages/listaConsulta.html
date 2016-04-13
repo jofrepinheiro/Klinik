@@ -37,7 +37,7 @@
     <div id="wrapper">
 
         <!-- Navigation -->
-        <nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="margin-bottom: 0">
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="margin-bottom: 10px">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                     <span class="sr-only">Toggle navigation</span>
@@ -74,21 +74,28 @@
                             <a href="index.html"><i class="fa fa-dashboard fa-fw"></i> Home</a>
                         </li>
 						
-                        <li>
-                            <a href="listaUsuario.html"><i class="fa fa-table fa-fw"></i> Gerenciamento</a> 
+						<li>
+                            <a href="#"><i class="fa fa-table fa-fw"> </i> Gerenciamento<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="listaPaciente.html">Paciente</a>
+                                </li>
+                                <li>
+                                    <a href="listaConsulta.html">Consulta</a>
+                                </li>
+							</ul>
+                            <!-- /.nav-second-level -->
                         </li>
                         <li>
                             <a href="#"><i class="fa fa-edit fa-fw"> </i> Cadastro<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="#">Administrador</a>
+                                    <a href="cadastroPaciente.html">Paciente</a>
                                 </li>
                                 <li>
-                                    <a href="cadastroMedico.html">Médico</a>
+                                    <a href="cadastroConsulta.html">Consulta</a>
                                 </li>
-								<li>
-                                    <a href="cadastroSec.html">Secretário</a>
-                                </li>	
+							</ul>
                             <!-- /.nav-second-level -->
                         </li>
                     </ul>
@@ -97,40 +104,105 @@
             </div>
             <!-- /.navbar-static-side -->
         </nav>
+	</div>
+	<div>
+        <div id="page-wrapper"  style="padding-top: 5%">
+            <div class="container">
 
-        <div id="page-wrapper" style="padding-top: 5%">
-			<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-			  <!-- Indicators -->
-			  <ol class="carousel-indicators">
-				<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-				<li data-target="#carousel-example-generic" data-slide-to="1"></li>
-				<li data-target="#carousel-example-generic" data-slide-to="2"></li>
-			  </ol>
+				<h2>Agenda</h2>
+					<div class="agenda">
+						<div class="table-responsive" style="margin-right: 2%">
+							<table class="table table-condensed table-bordered">
+								<thead>
+									<tr>
+										<th>Data</th>
+										<th>Hora</th>
+										<th>Paciente</th>
+										<th>Médico</th>
+										<th>Queixa</th>
+									</tr>
+								</thead>
+								<tbody>
+									<!-- Single event in a single day -->
+									<tr>
+										<td class="agenda-date" class="active" rowspan="1">
+											<div class="dayofmonth">14</div>
+											<div class="dayofweek">Sexta-Feira</div>
+											<div class="shortdate text-muted">Abril, 2016</div>
+										</td>
+										<td>
+											14:00h
+										</td>
+										<td>
+											<div>
+												João da Silva
+											</div>
+										</td>
+										<td>
+											<div>
+												Dr. Railan
+											</div>
+										</td>
+										<td>
+											<div>
+												Dor de Barriga
+											</div>
+										</td>										
+									</tr>
+									
+									<tr>
+										<td class="agenda-date" class="active" rowspan="3">
+											<div class="dayofmonth">18</div>
+											<div class="dayofweek">Segunda-Feira</div>
+											<div class="shortdate text-muted">Abril, 2016</div>
+										</td>
+										<td>
+											07:00h
+										</td>
+										<td>
+											<div>
+												José Xisto
+											</div>
+										</td>
+										<td>
+											<div>
+												Dr. João Paulo
+											</div>
+										</td>
+										<td>
+											<div>
+												Dor de ouvido 
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											07:30h
+										</td>
+										<td>
+											<div>
+												Jair Rodrigues
+											</div>
+										</td>
+										<td>
+											<div>
+												Dr. João Paulo
+											</div>
+										</td>
+										<td>
+											<div>
+												Dor de garganta 
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
 
-			  <!-- Wrapper for slides -->
-			<div class="carousel-inner" role="listbox">
-				<div class="item active">
-				  <img src="img/slider/slider1.png" alt="...">
-				</div>
-				<div class="item">
-				  <img src="img/slider/slider2.jpg" alt="...">
-				</div>
-				<div class="item">
-				  <img src="img/slider/slider3.jpg" alt="...">
-				</div>
-			</div>
-
-				  <!-- Controls -->
-				  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-					<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-					<span class="sr-only">Previous</span>
-				  </a>
-				  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-					<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-					<span class="sr-only">Next</span>
-				  </a>
-				</div>     
-				</div>
+        </div>
+        <!-- /#page-wrapper -->
 
     </div>
     <!-- /#wrapper -->
@@ -144,13 +216,21 @@
     <!-- Metis Menu Plugin JavaScript -->
     <script src="../bower_components/metisMenu/dist/metisMenu.min.js"></script>
 
-    <!-- Morris Charts JavaScript -->
-    <script src="../bower_components/raphael/raphael-min.js"></script>
-    <script src="../bower_components/morrisjs/morris.min.js"></script>
-    <script src="../js/morris-data.js"></script>
+    <!-- DataTables JavaScript -->
+    <script src="../bower_components/datatables/media/js/jquery.dataTables.min.js"></script>
+    <script src="../bower_components/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.min.js"></script>
 
     <!-- Custom Theme JavaScript -->
     <script src="../dist/js/sb-admin-2.js"></script>
+
+    <!-- Page-Level Demo Scripts - Tables - Use for reference -->
+    <script>
+    $(document).ready(function() {
+        $('#dataTables-example').DataTable({
+                responsive: true
+        });
+    });
+    </script>
 
 </body>
 

@@ -84,12 +84,11 @@
                                     <a href="cadastroAdmin.html">Administrador</a>
                                 </li>
                                 <li>
-                                    <a href="#">Médico</a>
+                                    <a href="cadastroMedico.html">Médico</a>
                                 </li>
 								<li>
-                                    <a href="cadastroSec.html">Secretário</a>
-                                </li>
-							</ul>
+                                    <a href="#">Secretário</a>
+                                </li>	
                             <!-- /.nav-second-level -->
                         </li>
                     </ul>
@@ -111,7 +110,7 @@
                 <div class="col-lg-12">
                     <div class="panel panel-default">
                         <div class="panel-heading">
-							Cadastrar Médico
+							Cadastrar Secretário
                         </div>
                         <div class="panel-body">
                             <form role="form">
@@ -148,10 +147,17 @@
                                         </div>
 										
 										<div class="form-group">
-											<label>CRM</label>
-											<input class="form-control" placeholder="">
+											<label>Turno</label>
+											<label class="checkbox-inline">
+												<input type="checkbox">Manhã
+											</label>
+											<label class="checkbox-inline">
+												<input type="checkbox">Tarde
+											</label>
+											<label class="checkbox-inline">
+												<input type="checkbox">Noite
+											</label>
 										</div>
-										
                                 </div>
                                 <!-- /.col-lg-6 (nested) -->
 								
@@ -221,7 +227,6 @@
 										<input class="form-control" placeholder="Ex: rot-g1">
 									</div>
 								</div>
-								
                             </div>
 								<button type="submit"  class="btn btn-default">Enviar</button>
 								<button type="reset"  class="btn btn-default">Limpar Campos</button>
