@@ -23,8 +23,7 @@ CREATE TABLE Usuario (
 );
   
 CREATE TABLE Administrador (
-  idAdministrador Serial NOT NULL ,
-  Usuario_idUsuario INT NOT NULL,
+  idAdministrador Serial NOT NULL,
   PRIMARY KEY(idAdministrador),
   idUsuario INTEGER REFERENCES Usuario (idUsuario) ON UPDATE CASCADE ON DELETE CASCADE
 );
