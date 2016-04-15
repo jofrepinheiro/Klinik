@@ -6,6 +6,13 @@ public class Usuario {
 	private int idUsuario;
 	private int idEndereco;
 	private String nome;
+	private String cpf;
+	public String getCpf() {
+		return cpf;
+	}
+	public void setCpf(String cpf) {
+		this.cpf = cpf;
+	}
 	private String login;
 	private String senha;
 	private Date dataNascimento;

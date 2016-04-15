@@ -31,7 +31,7 @@ public class UsuarioDAO {
 	
 	public Usuario getUsuario(Usuario usuario) throws SQLException{
 		Connection con = new Conexao().getConnection();
-		String sql = "SELECT login, senha, datanasc, nome, telefone, email, idendereco, ativo FROM USUARIO "
+		String sql = "SELECT login, senha, datanasc, nome, telefone, email, idendereco, ativo, cpf FROM USUARIO "
 				+ "WHERE IDUSUARIO=?";
 		
 		PreparedStatement statement = con.prepareStatement(sql);
@@ -46,6 +46,7 @@ public class UsuarioDAO {
 			usuario.setEmail(rs.getString(6));
 			usuario.setIdEndereco(rs.getInt(7));
 			usuario.setAtivo(rs.getInt(8));
+			usuario.setCpf(rs.getString(9));
 		}
 		System.out.println("Nome= "+usuario.getNome());
 		statement.close();
@@ -56,8 +57,8 @@ public class UsuarioDAO {
 	
 	public void cadastrarUsuario(Usuario usuario) throws SQLException{
 		Connection con = new Conexao().getConnection();
-		String sql = "INSERT INTO USUARIO (login, senha, nome, dataNasc, telefone, email, idEndereco, ativo) "
-				+ "VALUES (?,?,?,?,?,?,?,?)";
+		String sql = "INSERT INTO USUARIO (login, senha, nome, dataNasc, telefone, email, idEndereco, ativo, cpf) "
+				+ "VALUES (?,?,?,?,?,?,?,?,?)";
 		
 		PreparedStatement statement = con.prepareStatement(sql);
 		statement.setString(1, usuario.getLogin());
@@ -68,6 +69,7 @@ public class UsuarioDAO {
 		statement.setString(6, usuario.getEmail());
 		statement.setInt(7, usuario.getIdEndereco());
 		statement.setInt(8, usuario.getAtivo());
+		statement.setString(9, usuario.getCpf());
 		statement.executeUpdate();
 		
 		statement.close();
@@ -96,6 +98,7 @@ public class UsuarioDAO {
 				+ " telefone = ?"
 				+ " email = ?"
 				+ " idEndereco = ?"
+				+ " cpf = ?"
 				+ " where idUsuario=?";
 		
 		PreparedStatement statement = con.prepareStatement(sql);
@@ -106,7 +109,8 @@ public class UsuarioDAO {
 		statement.setString(5,  usuario.getTelefone());
 		statement.setString(6,  usuario.getEmail());
 		statement.setInt(7, usuario.getIdEndereco());
-		statement.setInt(8, usuario.getIdUsuario());
+		statement.setString(8, usuario.getCpf());
+		statement.setInt(9, usuario.getIdUsuario());
 
 		statement.executeUpdate();
 		

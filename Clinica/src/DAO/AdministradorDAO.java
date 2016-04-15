@@ -43,7 +43,7 @@ public class AdministradorDAO {
 		UsuarioDAO usuarioDAO = new UsuarioDAO();
 		usuarioDAO.cadastrarUsuario(administrador);
 		int idUsuario = usuarioDAO.getIdUsuario();
-		System.out.println("USUARIO Aqui = " + idUsuario);
+		System.out.println("USUARIO = " + idUsuario);
 		
 		String sql = "INSERT INTO ADMINISTRADOR (idUsuario) VALUES (?)";
 		
