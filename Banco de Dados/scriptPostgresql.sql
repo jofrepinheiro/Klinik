@@ -12,11 +12,11 @@ CREATE TABLE Usuario (
   idUsuario SERIAL NOT NULL,
   login VARCHAR(20) NULL,
   senha VARCHAR(20) NULL,
+  cpf VARCHAR(12) UNIQUE,
   dataNasc DATE NULL,
   nome VARCHAR(100) NULL,
   telefone VARCHAR(20) NULL,
   email VARCHAR(100) NULL,
-  cpf VARCHAR(12) UNIQUE,
   PRIMARY KEY(idUsuario),
   idEndereco INTEGER REFERENCES Endereco (idEndereco) ON UPDATE CASCADE ON DELETE CASCADE
 );
@@ -33,7 +33,18 @@ CREATE TABLE Medico (
   CRM INTEGER NULL,
   PRIMARY KEY(idMedico),
   idUsuario INTEGER REFERENCES Usuario (idUsuario) ON UPDATE CASCADE ON DELETE CASCADE
-  especialidade1 
+);
+
+CREATE TABLE Especialidade (
+  idEspecialidade SERIAL NOT NULL,
+  nome VARCHAR(80) NULL,
+  PRIMARY KEY(idEspecialidade)
+);
+
+CREATE TABLE Medico_Especialidade (
+  idEspecialidade INTEGER REFERENCES Especialidade (idEspecialidade) ON UPDATE CASCADE ON DELETE CASCADE,
+  idMedico INTEGER REFERENCES Medico (idMedico) ON UPDATE CASCADE ON DELETE CASCADE,
+  PRIMARY KEY (idEspecialidade, idMedico)
 );
 
 CREATE TABLE Secretario (
