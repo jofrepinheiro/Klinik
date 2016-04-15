@@ -37,7 +37,7 @@
     <div id="wrapper">
 
         <!-- Navigation -->
-        <nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="margin-bottom: 0">
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="margin-bottom: 10px">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                     <span class="sr-only">Toggle navigation</span>
@@ -52,7 +52,7 @@
             <ul class="nav navbar-top-links navbar-right">
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                        <i class="fa fa-user fa-fw"></i>  Nome de Usuário <i class="fa fa-caret-down"></i>
+                        <i class="fa fa-user fa-fw"></i>  Secretário <i class="fa fa-caret-down"></i>
                     </a>
                     <ul class="dropdown-menu dropdown-user">
                         <li><a href="#"><i class="fa fa-user fa-fw"></i> Informações </a>
@@ -74,21 +74,28 @@
                             <a href="index.html"><i class="fa fa-dashboard fa-fw"></i> Home</a>
                         </li>
 						
-                        <li>
-                            <a href="listaUsuario.html"><i class="fa fa-table fa-fw"></i> Gerenciamento</a> 
+						<li>
+                            <a href="#"><i class="fa fa-table fa-fw"> </i> Gerenciamento<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="listaPaciente.html">Paciente</a>
+                                </li>
+                                <li>
+                                    <a href="listaConsulta.html">Consulta</a>
+                                </li>
+							</ul>
+                            <!-- /.nav-second-level -->
                         </li>
                         <li>
                             <a href="#"><i class="fa fa-edit fa-fw"> </i> Cadastro<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="cadastroAdmin.html">Administrador</a>
+                                    <a href="cadastroPaciente.html">Paciente</a>
                                 </li>
                                 <li>
-                                    <a href="cadastroMedico.html">Médico</a>
+                                    <a href="cadastroConsulta.html">Consulta</a>
                                 </li>
-								<li>
-                                    <a href="#">Secretário</a>
-                                </li>	
+							</ul>
                             <!-- /.nav-second-level -->
                         </li>
                     </ul>
@@ -97,7 +104,7 @@
             </div>
             <!-- /.navbar-static-side -->
         </nav>
-
+		
         <div id="page-wrapper">
             <div class="row">
                 <div class="col-lg-12">
@@ -117,14 +124,22 @@
 								<div class="row">
 									<div class="col-lg-6">
 										<div class="form-group">
-                                            <label>Login</label>
-                                            <input class="form-control" placeholder="Ex: rot-g1">
+                                            <label>Nome</label>
+                                            <input class="form-control" placeholder="Ex: Eduardo Stark">
                                         </div>
 										
 										<div class="form-group">
-                                            <label>Senha</label>
-                                            <input type="password" class="form-control" placeholder="">
+                                            <label>CPF</label>
+                                            <input type="password" class="form-control" placeholder="XXX.XXX.XXX-XX">
                                         </div>
+										
+										<div class = "form-group">
+										<label>Sexo</label>
+											<select class="form-control" name="uf" id="uf">
+												<option value="F">Feminino</option>
+												<option value="M">Masculino</option>												
+											</select>
+										</div>
 										
 										<div class="form-group">
                                             <label>Data de Nascimento</label>
@@ -132,32 +147,16 @@
                                         </div>
 										
 										<div class="form-group">
-                                            <label>Nome</label>
-                                            <input class="form-control" placeholder="Ex: Joao 	">
-                                        </div>
-										
-										<div class="form-group">
                                             <label>Telefone</label>
                                             <input class="form-control" placeholder="(XX) X XXXX XXXX">
                                         </div>
+										
 										
 										<div class="form-group">
                                             <label>Email</label>
                                             <input class="form-control" placeholder="john@doe.com">
                                         </div>
-										
-										<div class="form-group">
-											<label>Turno</label>
-											<label class="checkbox-inline">
-												<input type="checkbox">Manhã
-											</label>
-											<label class="checkbox-inline">
-												<input type="checkbox">Tarde
-											</label>
-											<label class="checkbox-inline">
-												<input type="checkbox">Noite
-											</label>
-										</div>
+
                                 </div>
                                 <!-- /.col-lg-6 (nested) -->
 								
