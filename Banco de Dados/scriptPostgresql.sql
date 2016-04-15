@@ -18,6 +18,7 @@ CREATE TABLE Usuario (
   telefone VARCHAR(20) NULL,
   email VARCHAR(100) NULL,
   PRIMARY KEY(idUsuario),
+  ativo INTEGER NOT NULL,
   idEndereco INTEGER REFERENCES Endereco (idEndereco) ON UPDATE CASCADE ON DELETE CASCADE
 );
   
