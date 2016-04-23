@@ -12,21 +12,22 @@ import model.Usuario;
 public class Principal {
 
 	public static void main(String[] args) throws SQLException {
-		AdministradorDAO admDao = new AdministradorDAO();
-		Administrador adm = new Administrador();
+		System.out.println("Teste");
+//		AdministradorDAO admDao = new AdministradorDAO();
+//		Administrador adm = new Administrador();
+////		adm.setAtivo(1);
+////		adm.setDataNascimento(null);
+//     	adm.setLogin("Railan 4");
+//		adm.setSenha("blablaeu");
+//		adm.setNome("Eu");
 //		adm.setAtivo(1);
-//		adm.setDataNascimento(null);
-     	adm.setLogin("Railan 4");
-		adm.setSenha("blablaeu");
-		adm.setNome("Eu");
-		adm.setAtivo(1);
-		adm.setIdEndereco(1);
-		admDao.cadastrarAdministrador(adm);
-		//System.out.println("Inserido");
-		adm = admDao.getAdministrador(18);
-		System.out.println("ID="+adm.getIdAdministrador()+"Nome="+adm.getNome());
-		admDao.deletarAdministrador(adm);
-		//System.out.println("Deletado");
+//		adm.setIdEndereco(1);
+//		admDao.cadastrarAdministrador(adm);
+//		//System.out.println("Inserido");
+//		adm = admDao.getAdministrador(18);
+//		System.out.println("ID="+adm.getIdAdministrador()+"Nome="+adm.getNome());
+//		admDao.deletarAdministrador(adm);
+//		//System.out.println("Deletado");
 		
 	}
 
