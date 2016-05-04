@@ -11,7 +11,7 @@ public class Exame {
 	private Date dataExame;
 	private Time horarioExame;
 	private String resultado;
-	private String regiao;
+	private int idTipoExame;
 	
 	public int getIdExame() {
 		return idExame;
@@ -40,6 +40,12 @@ public class Exame {
 	public Date getDataExame() {
 		return dataExame;
 	}
+	public int getIdTipoExame() {
+		return idTipoExame;
+	}
+	public void setIdTipoExame(int idTipoExame) {
+		this.idTipoExame = idTipoExame;
+	}
 	public void setDataExame(Date dataExame) {
 		this.dataExame = dataExame;
 	}
@@ -54,11 +60,5 @@ public class Exame {
 	}
 	public void setResultado(String resultado) {
 		this.resultado = resultado;
-	}
-	public String getRegiao() {
-		return regiao;
-	}
-	public void setRegiao(String regiao) {
-		this.regiao = regiao;
 	}	
 }

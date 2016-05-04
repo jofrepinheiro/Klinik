@@ -36,16 +36,16 @@ public class Consulta {
 	public void setIdMedico(int idMedico) {
 		this.idMedico = idMedico;
 	}
-	public Date getDataRealizacao() {
+	public Date getDataConsulta() {
 		return dataConsulta;
 	}
-	public void setDataRealizacao(Date dataRealizacao) {
+	public void setDataConsulta(Date dataRealizacao) {
 		this.dataConsulta = dataRealizacao;
 	}
-	public Time getHorario() {
+	public Time getHorarioConsulta() {
 		return horarioConsulta;
 	}
-	public void setHorario(Time horario) {
+	public void setHorarioConsulta(Time horario) {
 		this.horarioConsulta = horario;
 	}
 	public String getMotivo() {

@@ -7,18 +7,19 @@ public class Usuario {
 	private int idEndereco;
 	private String nome;
 	private String cpf;
-	public String getCpf() {
-		return cpf;
-	}
-	public void setCpf(String cpf) {
-		this.cpf = cpf;
-	}
 	private String login;
 	private String senha;
 	private Date dataNascimento;
 	private String telefone;
 	private String email;
 	private int ativo;
+	
+	public String getCpf() {
+		return cpf;
+	}
+	public void setCpf(String cpf) {
+		this.cpf = cpf;
+	}
 	
 	public int getAtivo() {
 		return ativo;

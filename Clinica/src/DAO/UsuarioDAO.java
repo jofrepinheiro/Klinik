@@ -48,7 +48,6 @@ public class UsuarioDAO {
 			usuario.setAtivo(rs.getInt(8));
 			usuario.setCpf(rs.getString(9));
 		}
-		System.out.println("Nome= "+usuario.getNome());
 		statement.close();
 		con.close();
 		
@@ -88,7 +87,6 @@ public class UsuarioDAO {
 	
 	public void alterarUsuario(Usuario usuario) throws SQLException{
 		Connection con = new Conexao().getConnection();
-		UsuarioDAO usuarioDAO = new UsuarioDAO();
 		
 		String sql = "UPDATE USUARIO SET "
 				+ " login = ?"
